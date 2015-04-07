@@ -1,0 +1,21 @@
+.inp input{
+	width: 40px;
+}
+#tape{
+	margin: 50px 0;
+	padding: 5px 0;
+	background: #222;
+	border-top: 4px #666 dashed; 
+	border-bottom: 4px #666 dashed; 
+}
+#tape input{
+	border: 1px #111 solid;
+	padding: 8px;
+	background: #454545;
+	color: #FFF;
+	width: 40px;
+}
+#tape input.active{
+	background: #757575;
+	border-bottom: 5px solid #09C;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Turing Machine</title>
+	<link rel="stylesheet" type="text/css" href="css/pure.min.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/turing.css">
+</head>
+<body>
+<nav>
+	<a href="index.html"><span>Home</span></a>
+	<a href="turing.html"><span>Turing</span></a>
+</nav>
+<main class="notnav">
+<div ng-app ng-controller="Controller">
+<center>
+	<p>Current state: {{state}}</p>
+	<div id="tape">
+		<input ng-repeat="item in tapeItems" ng-model="item.val" class="{{item.active}}">
+	</div>
+	<table class="pure-table pure-table-horizontal">
+		<thead><tr><th>Cur. state</th><th>Read</th><th>Next state</th><th>Write</th><th>Move</th></tr></thead>
+		<tbody><tr class="inp" ng-repeat="input in inputs">
+			<td><input ng-model="input.curstate" type="text"></td>
+			<td><input ng-model="input.inp" type="text"></td>
+			<td><input ng-model="input.nextstate" type="text"></td>
+			<td><input ng-model="input.write" type="text"></td>
+			<td><select ng-model="input.move">
+				<option value="R">Right</option>
+				<option value="L">Left</option>
+			</select></td>
+		</tr></tbody>
+	</table>
+	<br>
+	<button class="pure-button" ng-click="addRule();">Add a rule</button>
+	<button class="pure-button" ng-click="removeRule();">Remove last rule</button>
+	<input type="button" class="pure-button pure-button-primary" ng-click="go();" value="GO!">
+	<input type="button" class="pure-button pure-button-primary" ng-click="togglePlay();" id="play" value="Play">
+	<br>
+	<label>Demos: </label><select ng-model="demo"><option value="">-</option><option value="counter">Binary Counter</option></select>
+</center>
+</div>
+</main>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/turing.js"></script>
+</body>
+</html>
