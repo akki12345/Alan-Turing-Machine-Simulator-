@@ -22,25 +22,6 @@ var Controller = function($scope, $interval){
 	$scope.tapeItems = [];
 	for (var i = 0; i < 15; i++)
 		$scope.tapeItems.push(new TapeItem());
-	$scope.$watch('demo',function(ne, old){
-		if(ne != old){
-			var l = $scope.tapeItems.length;
-			for (var i = 0; i < l-1; i++) {
-				$scope.tapeItems[i].val = '';
-			};
-			$scope.tapeItems[l-1].val = '#';
-			$scope.inputs = [
-				{curstate: '0', inp: '', nextstate: '1', write: '1', move: 'R'},
-				{curstate: '0', inp: '0', nextstate: '1', write: '1', move: 'R'},
-				{curstate: '0', inp: '1', nextstate: '0', write: '0', move: 'L'},
-				{curstate: '0', inp: '#', nextstate: '1', write: '#', move: 'R'},
-				{curstate: '1', inp: '0', nextstate: '1', write: '0', move: 'R'},
-				{curstate: '1', inp: '1', nextstate: '1', write: '1', move: 'R'},
-				{curstate: '1', inp: '#', nextstate: '0', write: '#', move: 'L'},
-			];
-			$scope.pointer.moveTo(l-1);
-		}
-	});
 	$scope.tapeItems[0].active = 'active';
 	$scope.pointer = (function(){
 		var pos = 0;
