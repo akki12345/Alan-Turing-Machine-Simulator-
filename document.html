@@ -10,8 +10,10 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/blog-home.css" rel="stylesheet">
 </head>
+
 <body>
-<!-- Navigation -->
+
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,57 +42,51 @@
                 <h1 class="page-header">
                  What is Turing Machine?
                 </h1>
+                <p>A Turing machine is a hypothetical machine thought of by the mathematician Alan Turing in 1936. Despite its simplicity, the machine can simulate ANY computer algorithm, no matter how complicated it is!
+                    <br>
+                    <br>
+                    <img class="img-responsive" src="img/a1.png" alt=""><br>
+                Above is a very simple representation of a Turing machine. It consists of an infinitely-long tape which acts like the memory in a typical computer, or any other form of data storage. The squares on the tape are usually blank at the start and can be written with symbols. In this case, the machine can only process the symbols 0 and 1 and " " (blank), and is thus said to be a 3-symbol Turing machine.
 
-                <!-- First Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:00 PM</p>
+At any one time, the machine has a head which is positioned over one of the squares on the tape. With this head, the machine can perform three very basic operations:
+<br>
+<br>
+1.Read the symbol on the square under the head.
+<br>
+2.Edit the symbol by writing a new symbol or erasing it.
+<br>
+3.Move the tape left of right by one square so that the machine can read and edit the symbol on a neighbouring square.</p>
                 <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+                <h3>How It Is Work</h3>
+                <h4>A Simple Demonstration<h4> 
                 <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, veritatis, tempora, necessitatibus inventore nisi quam quia repellat ut tempore laborum possimus eum dicta id animi corrupti debitis ipsum officiis rerum.</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <img class="img-responsive" src="img/a2.png" alt="">
+    
+                <hr>
+                <h4>A Simple Program </h4>
+                    <p>With the symbols "1 1 0" printed on the tape, let's attempt to convert the 1s to 0s and vice versa. This is called bit inversion, since 1s and 0s are bits in binary. This can be done by passing the following instructions to the Turing machine, utilising the machine's reading capabilities to decide its subsequent operations on its own. These instructions make up a simple program.</p>
+                <img class="img-responsive" src="img/a3.png" alt="">
+                <br>
+                The machine will first read the symbol under the head, write a new symbol accordingly, then move the tape left or right as instructed, before repeating the read-write-move sequence again.
+                <br>
+                <img class="img-reponsive" src="img/a4.png">
+                <br>
+                <p>Finally, a 'blank' symbol is read, so the machine does nothing apart from read the blank symbol continuously since we have instructed it to repeat the read-write-move sequence without stopping.
 
-                <hr>
-
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, quasi, fugiat, asperiores harum voluptatum tenetur a possimus nesciunt quod accusamus saepe tempora ipsam distinctio minima dolorum perferendis labore impedit voluptates!</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr>
-
-                <!-- Third Blog Post -->
-                <h2>
-                    <a href="#">Blog Post Title</a>
-                </h2>
-                <p class="lead">
-                    by <a href="index.php">Start Bootstrap</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 28, 2013 at 10:45 PM</p>
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, voluptates, voluptas dolore ipsam cumque quam veniam accusantium laudantium adipisci architecto itaque dicta aperiam maiores provident id incidunt autem. Magni, ratione.</p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
+In fact, the program is incomplete. How does the machine repeat the sequence endlessly, and how does the machine stop running the program? The program tells it to with the concept of a machine state.</p>
                 <hr>
             </div>
 
         </div>
+         <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Automata Project 2015</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
 
     </div>
     <script src="js/jquery.js"></script>
